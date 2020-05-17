@@ -24,6 +24,10 @@ class Graph extends Component<IProps, {}> {
       "perspective-viewer"
     )[0] as unknown) as PerspectiveViewerElement;
 
+    // update new schema to include upper_bound & lower_bound
+    // also ration and trigger alert.
+    // this will be the props for DataManipulator func
+
     const schema = {
       price_abc: "float",
       price_def: "float",

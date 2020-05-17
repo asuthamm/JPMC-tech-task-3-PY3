@@ -1,5 +1,6 @@
 import { ServerRespond } from "./DataStreamer";
 
+// populate interface with new schema from Graph.tsx
 export interface Row {
   price_abc: number;
   price_def: number;
@@ -9,6 +10,9 @@ export interface Row {
   lower_bound: number;
   trigger_alert: number | undefined;
 }
+
+// update the generateRow function to compute new price
+// establish upperBound & lowerBound and trigger alerts base on the ratio
 
 export class DataManipulator {
   static generateRow(serverRespond: ServerRespond[]): Row {
